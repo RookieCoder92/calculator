@@ -1,0 +1,170 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #222;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.calculator {
+    height: 375px;
+    width: 250px;
+    background-color: #383838;
+    border-radius: 10px;
+    position: relative;
+}
+
+.calculator-top {
+    width: 100%;
+    height: 30%;
+    background-color: #383838;
+    border-radius: 10px;
+    position: relative;
+}
+
+.calculator-display {
+    position: absolute;
+    width: 85%;
+    height: 60%;
+    background-color: #aaa;
+    top: 20%;
+    left: 7.5%;
+    border-radius: 5px;
+    font-family: "VT323";
+    font-size: 50px;
+}
+
+.calculator-display p {
+    position: absolute;
+    margin: 0;
+    right: 10%;
+    line-height: 67.5px;
+    color: #383838;
+}
+
+.calculator-body {
+    position: absolute;
+    width: 90%;
+    height: 70%;
+    top: 30%;
+    left: 5%;
+    background-color: #383838;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: 
+    "clear-button clear-button back-button multiply-button"
+    "seven-button eight-button nine-button divide-button"
+    "four-button five-button six-button minus-button"
+    "one-button two-button three-button add-button"
+    "zero-button zero-button decimal-button equals-button";
+}
+
+.button {
+    width: 75%;
+    height: 75%;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    align-self: center;
+    justify-self: center;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit';
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.double-length-btn {
+    border-radius: 5px;
+    width: 85%;
+}
+
+.operator {
+    color: turquoise;
+}
+
+.clear-button {
+    grid-area: clear-button;
+}
+
+.back-button {
+    grid-area: back-button;
+}
+
+.multiply-button {
+    grid-area: multiply-button;
+}
+
+.seven-button {
+    grid-area: seven-button;
+}
+
+.eight-button {
+    grid-area: eight-button;
+}
+
+.nine-button {
+    grid-area: nine-button;
+}
+
+.divide-button {
+    grid-area: divide-button;
+}
+
+.four-button {
+    grid-area: four-button;
+}
+
+.five-button {
+    grid-area: five-button;
+}
+
+.six-button {
+    grid-area: six-button;
+}
+
+.minus-button {
+    grid-area: minus-button;
+}
+
+.one-button {
+    grid-area: one-button;
+}
+
+.two-button {
+    grid-area: two-button;
+}
+
+.three-button {
+    grid-area: three-button;
+}
+
+.plus-button {
+    grid-area: plus-button;
+}
+
+.zero-button {
+    grid-area: zero-button;
+}
+
+.decimal-button {
+    grid-area: decimal-button;
+}
+
+.equals-button {
+    grid-area: equals-button;
+}
+
+
+
