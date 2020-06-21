@@ -1,7 +1,11 @@
 // declare global variables
-let num1;
-let num2;
-let operator;
+let num1 = "";
+let num2 = "";
+let operator = "";
+let result = "";
+
+// calculator display
+const calcDisplay = document.querySelector(".calculator-display-p");
 
 // save buttons to variables
 const clearButton = document.querySelector(".clear-button");
@@ -25,78 +29,120 @@ const equalsButton = document.querySelector(".equals-button");
 
 // add event listeners to all numbers
 zeroButton.addEventListener("click", function () {
-    console.log("0 was clicked!");
+    if (!operator) {
+        num1 += "0"
+    } else {
+        num2 += "0"
+    }
+    renderDisplay();
 });
 
 oneButton.addEventListener("click", function () {
-    console.log("1 was clicked!");
+    if (!operator) {
+        num1 += "1"
+    } else {
+        num2 += "1"
+    }
+    renderDisplay();
 });
 
 twoButton.addEventListener("click", function () {
-    console.log("2 was clicked!");
+    if (!operator) {
+        num1 += "2"
+    } else {
+        num2 += "2"
+    }
+    renderDisplay();
 });
 
 threeButton.addEventListener("click", function () {
-    console.log("3 was clicked!");
+    if (!operator) {
+        num1 += "3"
+    } else {
+        num2 += "3"
+    }
+    renderDisplay();
 });
 
 fourButton.addEventListener("click", function () {
-    console.log("4 was clicked!");
+    if (!operator) {
+        num1 += "4"
+    } else {
+        num2 += "4"
+    }
+    renderDisplay();
 });
 
 fiveButton.addEventListener("click", function () {
-    console.log("5 was clicked!");
+    if (!operator) {
+        num1 += "5"
+    } else {
+        num2 += "5"
+    }
+    renderDisplay();
 });
 
 sixButton.addEventListener("click", function () {
-    console.log("6 was clicked!");
+    if (!operator) {
+        num1 += "6"
+    } else {
+        num2 += "6"
+    }
+    renderDisplay();
 });
 
 sevenButton.addEventListener("click", function () {
-    console.log("7 was clicked!");
+    if (!operator) {
+        num1 += "7"
+    } else {
+        num2 += "7"
+    }
+    renderDisplay();
 });
 
 eightButton.addEventListener("click", function () {
-    console.log("8 was clicked!");
+    if (!operator) {
+        num1 += "8"
+    } else {
+        num2 += "8"
+    }
+    renderDisplay();
 });
 
 nineButton.addEventListener("click", function () {
-    console.log("9 was clicked!");
+    if (!operator) {
+        num1 += "9"
+    } else {
+        num2 += "9"
+    }
+    renderDisplay();
 });
 
 
 // add event listeners to miscellanious buttons
-clearButton.addEventListener("click", function () {
-    console.log("C was clicked!");
-});
-backButton.addEventListener("click", function () {
-    console.log("< was clicked!");
-});
+clearButton.addEventListener("click", clearDisplay);
+
+backButton.addEventListener("click", backspace);
 
 decimalButton.addEventListener("click", function () {
-    console.log(". was clicked!");
+    if (!operator) {
+        num1 += "."
+    } else {
+        num2 += "."
+    }
+    renderDisplay();
 });
 
 
 // add event listeners to operators
-addButton.addEventListener("click", function () {
-    console.log("+ was clicked!");
-});
+addButton.addEventListener("click", operatorIsAdd);
 
-minusButton.addEventListener("click", function () {
-    console.log("- was clicked!");
-});
+minusButton.addEventListener("click", operatorIsMinus);
 
-divideButton.addEventListener("click", function () {
-    console.log("/ was clicked!");
-});
+divideButton.addEventListener("click", operatorIsDivide);
 
-multiplyButton.addEventListener("click", function () {
-    console.log("* was clicked!");
-});
+multiplyButton.addEventListener("click", operatorIsMultiply);
 
 
 // add event listener to final operator
-equalsButton.addEventListener("click", function () {
-    console.log("= was clicked!");
-});
+equalsButton.addEventListener("click", operate);
