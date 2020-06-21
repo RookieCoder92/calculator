@@ -181,6 +181,10 @@ button:hover {
         height: 100vh;
         width: 70vh;
     }
+
+    .calculator-display p {
+        line-height: 100%;
+    }
 }
 
 
