@@ -15,8 +15,8 @@ body {
 }
 
 .calculator {
-    height: 500px;
-    width: 350px;
+    height: 700px;
+    width: 490px;
     background-color: #383838;
     border-radius: 10px;
     position: relative;
@@ -38,16 +38,18 @@ body {
     top: 20%;
     left: 7.5%;
     border-radius: 5px;
-    font-family: "VT323";
-    font-size: 40px;
+    font-family: "Kanit";
+    font-size: 2.5rem;
     overflow: hidden;
 }
 
-.calculator-display p {
+.calculator-display-p {
     position: absolute;
+    top: 25%;
+    display: inline-block;
+    transform: translateY(-50%, -50%);
     margin: 0;
     right: 10%;
-    line-height: 90px;
     color: #383838;
 }
 
@@ -179,12 +181,14 @@ button:hover {
 
 @media (max-width: 500px) {
     .calculator {
-        height: 100vh;
-        width: 70vh;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
     }
 
-    .calculator-display p {
+    .calculator-display-p {
         font-size: 30px;
+        top: 30%;
     }
 }
 

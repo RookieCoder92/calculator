@@ -3,8 +3,10 @@ function renderDisplay() {
         calcDisplay.textContent = result;
     } else if (!operator) {
         calcDisplay.textContent = num1;
+    }  else if (num1 && operator && num2) {
+        calcDisplay.textContent = `${num1} ${operator} ${num2}`;
     } else if (num1 && operator) {
-        calcDisplay.textContent = `${num1}${operator}${num2}`;
+        calcDisplay.textContent = `${num1} ${operator}`;
     }
 }
 
@@ -70,16 +72,36 @@ function operatorIsDivide() {
 function operate() {
     if (num1 && num2 && operator) {
         if (operator === "+") {
-            result = (Number(num1) + Number(num2)).toFixed(2);
+            result = (Number(num1) + Number(num2));
+            if (Number.isInteger(result)) {
+                result = result.toString();
+            } else {
+                result = result.toFixed(2);
+            }
             renderDisplay();
         } else if (operator === "-") {
-            result = (Number(num1) - Number(num2)).toFixed(2);
+            result = (Number(num1) - Number(num2));
+            if (Number.isInteger(result)) {
+                result = result.toString();
+            } else {
+                result = result.toFixed(2);
+            }
             renderDisplay();
         } else if (operator === "x") {
-            result = (Number(num1) * Number(num2)).toFixed(2);
+            result = (Number(num1) * Number(num2));
+            if (Number.isInteger(result)) {
+                result = result.toString();
+            } else {
+                result = result.toFixed(2);
+            }
             renderDisplay();
         } else if (operator === "/") {
-            result = (Number(num1) / Number(num2)).toFixed(2);
+            result = (Number(num1) / Number(num2));
+            if (Number.isInteger(result)) {
+                result = result.toString();
+            } else {
+                result = result.toFixed(2);
+            }
             renderDisplay();
         }
         num1 = result;
